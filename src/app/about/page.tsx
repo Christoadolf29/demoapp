@@ -29,7 +29,7 @@ const About = () => (
       </section>
 
       <aside className="md:w-1/2 flex justify-center items-center">
-        <img src="D:\vs\demoapp\public" alt="Image" className="max-w-full h-auto" />
+        <h1>test</h1>
       </aside>
     </div>
 
