@@ -1,13 +1,15 @@
+import Image from "next/image"
 import Link from "next/link";
+import homeImage from './images/home.jpg';
 
 export default function Home(){
   return(
     <div>
-    <header className="text-white p-4">
+    <header className="text-white p-12">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-3xl font-bold">Chief Pillai</h1>
+        <h1 className="text-4xl italic font-serif font-bold">Chief Pillai</h1>
         <ul className="flex">
-          <li className="mr-10 text-1xl">
+          <li className="mr-10text-1xl">
             <Link href="/" legacyBehavior><a className="text-white">Home</a></Link>
           </li>
           <li className="mr-10 text-1xl">
@@ -24,24 +26,27 @@ export default function Home(){
     </header>
 
     <div className="container mx-auto flex justify-between items-center">
-      <section className="md:w-1/2 text-center text-4xl mt-4 text-white min-h-screen flex flex-col justify-center ">
-        <p>Suresh Pillai is an Indian-born British chef and restaurateur</p>
+      <section className="md:w-1/2 text-center italic font-sans text-2xl mt-4 text-white min-h-screen flex flex-col justify-center ">
+        <p>Suresh Pillai is an Indian-born British chef and restaurateurant</p>
         <p>Born: 25 April 1978 (age 45 years), Kollam</p>
-        <p>Citizenship: British
-</p>
+        <p>Citizenship: British</p>
         <br />
         <br />
-        <p>Let me show my life!!!</p>
-        <p>Let's have some fun together in the journey!!</p>
       </section>
 
-      <aside className="md:w-1/2 flex justify-center items-center">
-        <img src="/1-removebg-preview.png" alt="Image" className="max-w-full h-auto" />
+      <aside className="md:w-1/2 flex justify-center p-6 items-left">
+      <Image src={homeImage}
+         alt="image alt"
+         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+         width={5000}
+         height={5000}
+         >
+
+         </Image>
       </aside>
     </div>
 
-    <footer className="text-center mt-4 text-white">
-      <p>Copyright</p>
+    <footer className="text-left mt-4 text-white">
     </footer>
   </div>
 
