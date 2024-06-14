@@ -1,54 +1,61 @@
-import Image from "next/image"
-import Link from "next/link";
-import homeImage from './images/home.jpg';
+import Link from 'next/link';
 
-export default function Home(){
-  return(
-    <div>
-    <header className="text-white p-12">
+const Home = () => (
+  <div className="bg-black min-h-screen text-white">
+    {/* Navigation Bar */}
+    <nav className="bg-orange-500 text-black py-4">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-4xl italic font-serif font-bold">Chief Pillai</h1>
+        <h1 className="text-3xl font-bold">NEXT APP</h1>
         <ul className="flex">
-          <li className="mr-10text-1xl">
-            <Link href="/" legacyBehavior><a className="text-white">Home</a></Link>
+          <li className="mr-6">
+            <Link href="/" legacyBehavior><a className="text-black hover:text-gray-100">Home</a></Link>
           </li>
-          <li className="mr-10 text-1xl">
-            <Link href="/about" legacyBehavior><a className="text-white">About</a></Link>
+          <li className="mr-6">
+            <Link href="/about" legacyBehavior><a className="text-black hover:text-gray-100">About</a></Link>
           </li>
-          <li className="mr-10 text-1xl">
-            <Link href="/contact" legacyBehavior><a className="text-white">Contact</a></Link>
+          <li className="mr-6">
+            <Link href="/contact" legacyBehavior><a className="text-black hover:text-gray-100">Contact</a></Link>
           </li>
-          <li className="mr-10 text-1xl">
-            <Link href="/services" legacyBehavior><a className="text-white">Services</a></Link>
+          <li>
+            <Link href="/services" legacyBehavior><a className="text-black hover:text-gray-100">Services</a></Link>
           </li>
         </ul>
       </div>
-    </header>
+    </nav>
 
-    <div className="container mx-auto flex justify-between items-center">
-      <section className="md:w-1/2 text-center italic font-sans text-2xl mt-4 text-white min-h-screen flex flex-col justify-center ">
-        <p>Suresh Pillai is an Indian-born British chef and restaurateurant</p>
-        <p>Born: 25 April 1978 (age 45 years), Kollam</p>
-        <p>Citizenship: British</p>
-        <br />
-        <br />
+    {/* Content */}
+    <div className="container mx-auto py-8 text-center">
+      <section>
+        <h2 className="text-2xl font-semibold">Welcome to Our Home Page</h2>
+        <p className="mt-4">Thank you for visiting our website!</p>
+        <p className="mt-4">We specialize in creating amazing web experiences.</p>
+        <p className="mt-4">Explore our services and contact us for inquiries.</p>
       </section>
 
-      <aside className="md:w-1/2 flex justify-center p-6 items-left">
-      <Image src={homeImage}
-         alt="image alt"
-         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-         width={5000}
-         height={5000}
-         >
-
-         </Image>
-      </aside>
+      <section className="mt-12">
+        <h2 className="text-2xl font-semibold">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">Web Development</h3>
+            <p className="text-gray-300">We build responsive and scalable web applications.</p>
+          </div>
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">Mobile App Development</h3>
+            <p className="text-gray-300">We create engaging mobile apps for iOS and Android platforms.</p>
+          </div>
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">UI/UX Design</h3>
+            <p className="text-gray-300">We design user-friendly interfaces with a focus on user experience.</p>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <footer className="text-left mt-4 text-white">
+    {/* Footer */}
+    <footer className="text-center py-4">
+      <p>This is footer</p>
     </footer>
   </div>
+);
 
-  );
-}
+export default Home;
